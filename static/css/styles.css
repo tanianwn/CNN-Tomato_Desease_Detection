@@ -1,0 +1,94 @@
+body {
+    font-family: 'Helvetica', sans-serif;   
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.left {
+    width: 48%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.right {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.chart {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#predictionChart {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3f4c8b;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.left, .right {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+    margin-right: 20px;
+}
+
+.right div {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .left, .right {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #healthSickChart, #predictionChart {
+        width: 80%;
+        height: auto;
+    }
+}

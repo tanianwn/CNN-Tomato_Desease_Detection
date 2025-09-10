@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Prediction Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="left">
+        <h1>Tomato Image Prediction Dashboard</h1>
+
+        <div>
+            <h3>Upload an Image for Prediction</h3>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="imageFile" name="image" accept="image/*" required>
+                <button type="submit">Upload Image</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>Recent Predictions</h3>
+            <div id="recentPredictions">
+            </div>
+        </div>
+    </div>
+
+    <div class="right">
+        <div>
+            <h3>Health vs Sick Tomatoes</h3>
+            <canvas id="healthSickChart" class="chart"></canvas>
+        </div>
+
+        <div>
+            <h3>Class Distribution</h3>
+            <canvas id="predictionChart" class="chart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
